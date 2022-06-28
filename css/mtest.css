@@ -1,0 +1,334 @@
+
+
+	
+	html{
+			min-width: 320px;
+			max-width: 479px;
+
+		}
+	html, body, div, p, h1, h2, h3, ul, ol, li, label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	} 
+	
+	ul li{
+		list-style: none;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+	
+	
+
+
+		body{
+		width: 100%;
+
+		background-color: rgba(45, 45, 45, 0.25); 
+
+
+		}
+		
+
+		.header{
+			display: none;
+		}
+		
+		.top-padding{
+			width: 100%;
+			height: 55px;
+			display: none;
+		}
+		
+	  /* Target portrait smartphones */
+	  
+	  	.main-compose{
+/* 		padding-top: 55px;  */
+		width: 100%;
+		box-sizing: padding-box;
+		height: 100%;
+		min-height: 550px;
+/* 		background-color: rgba(45, 45, 45, 0.90); */
+
+		background-image: url(/Images/Content/a4.jpg); 
+		background-size: 220% 100%;
+		background-repeat: no-repeat;
+		background-position-x: right;
+		background-position-y: top;
+
+		
+	}
+	
+		.main-bg{
+		margin: 0 auto;
+		width: 100%;
+		height:auto;	
+		
+
+	}
+	
+	.main-bg .section{
+		display: none;
+
+	}
+	
+
+
+	
+	.main-bg .compose-bg{
+		float: left;
+		width: 100%;
+		height: 100%;
+
+	}
+	
+	
+
+	
+	.compose-cell{
+		position: relative;
+		top: 65px;
+		width: 100%;
+		
+
+
+	}
+	
+	.compose-cell h1{
+	text-align: center;
+	font-family: 'Jeju Gothic', sans-serif;
+	font-family: sans-serif;
+	font-weight: bolder;
+	color: #fff;
+	text-shadow: 0px 0px 1px #000;
+	font-size: 1.465em;
+	opacity: 1;
+
+
+}
+	.main-compose h2{
+	text-align: center;
+	margin-top:35px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #fff;
+	line-height: 25px;
+	text-shadow: 0px 0px 0.5px #353535;
+
+	font-size: 13px;
+	opacity: 0.9;
+	}
+	
+	.compose-cell .society{
+		margin: 45px auto 0 auto;
+		width: 320px;
+ 		height:150px; 
+		font-family: sans-serif;
+
+	}
+	
+	.society ul{
+/*		text-align: center; */
+		width: 320px;
+		height: auto;
+
+
+	}
+	
+
+	
+	.society ul .commemorate1{
+		display: none;
+	}
+	
+	.society ul .commemorate2{
+
+		width: 103.5px; 
+		font-size: 22.5px;
+		font-weight: bold;
+		display: inline-block;
+		opacity: 1;
+		text-align: center;
+		margin-bottom: 19px;
+		
+	}		
+	
+	.society ul li{
+		
+		width: 103.5px; 
+		font-size: 12px;
+		font-weight: bold;
+		display: inline-block;
+		opacity: 0.9;
+		text-align: center;
+		margin-bottom: 15px;
+		
+	}	
+	
+	
+	
+
+	.society ul li a{
+		color: #ffa;
+		font-size: 16px;
+		display: block;
+	}
+	
+	.society ul li span{
+	font-size: 12.5px;
+	
+	}
+	
+	
+	.society p{
+		text-align: right;
+		position: relative;
+		right: 15px;
+	}
+	
+	.society p a{
+		color: #fff;
+		opacity: 0.28;
+		font-weight: bold;
+		font-family: sans-serif;
+		font-size: 14px;
+		display: none;
+	}
+	
+	
+
+	.cell-bg{
+		margin: 45px auto 0 auto;
+		width: 320px;
+/*
+		background-color: rgba(45, 45, 45, 0.2);
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+     	 -ms-border-radius:8px;
+			border-radius: 8px;
+*/
+	}
+
+
+	.compose-cell label{
+		padding: 15px 0 13px 0;
+		display: block;
+		text-align: center;
+		color: #fff;
+		font-family: 'Nanum Gothic', sans-serif;
+		opacity: 70%;
+
+	}
+
+	.content-search{
+		margin: 0 auto;
+		width: 290px;
+		height: 106px;
+		
+		border-radius: 2px;
+		box-shadow: 0px 0px 2px black;
+
+	
+	
+	}
+	
+	.content-search li{
+/*  		display: inline;  */
+		display: block;		
+		height: 36px;
+	
+	}
+	
+
+
+	.content-search input[type="text"]{
+	height: 32px;
+	 
+    outline: 0;
+ 	text-align: center; 
+    background-color: #fefefe;
+    font-family: sans-serif;
+    font-size: 15px;  
+	border: 0px;
+	font-weight: bolder;
+	 border-bottom: 1px solid #acacac;
+	 opacity: 0.92;
+}
+
+
+
+	.content-search input[type="button"]:hover{
+		background-color: #ff7;
+		cursor: pointer;
+
+	}
+
+/*
+.content-search .sinceyear{
+	width: 100px;
+	border-radius: 2px 0 0 3px;
+
+}
+*/
+.content-search .agoyear{
+	border-radius:3px 3px 0px 0px;
+	width: 288px;                           /* 출생년도 필드를 제거하고 사이즈 조정 + 50px + 8px , border-radius 추가, margin은 원래 그대로*/
+/* 	margin: -4px; */
+	position: relative;
+
+
+}
+
+.content-search .agoname{
+	width: 288px;                           /* 출생년도 필드를 제거하고 사이즈 조정 + 50px */
+	position: relative;
+	top: -1px;
+	left: 0px;
+	
+}
+
+
+/*
+.content-search input[type="text"]{
+	  -webkit-appearance: textfield;
+       -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    		box-sizing: content-box;
+}
+*/
+
+.content-search input::-webkit-text-decoration, input::-webkit-text-cancel-button {
+	display: none;
+}
+
+
+    
+        
+	.content-search input[type="button"]{
+		position: relative;
+/* 		top:-1px; */
+	width: 290px;
+	height: 36px;
+	border: 0px;
+	background-color: #ffa;
+/* 	border-left: 1px solid #acacac; */
+	border-radius:0px 0px 3px 3px;
+/* 	margin-left: -4px; */
+	font-family: sans-serif;
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 14px;
+	top: -2px;
+	left: 0px;
+	font-weight: bolder;
+	opacity: 0.92;
+}
+	
+
+	.main-bg .footer{
+
+		display: none;
+	}
+	
+

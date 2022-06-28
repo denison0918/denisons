@@ -1,0 +1,431 @@
+
+	html{
+		
+	}
+	
+	html, body, div, p, h1, h2, h3, ul, ol, li, label, span{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-family: sans-serif;
+	} 
+		
+	ul li, ol li{
+		list-style: none;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+	
+	input[type="text"]{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0;
+		box-shadow: 0px;
+		text-decoration: none;
+		text-indent: 10px;
+		border: 1px solid rgba(0,0,0,0.15);
+		color: gray;
+	}
+	input[type="number"]{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0;
+		box-shadow: 0px;
+		text-decoration: none;
+		text-indent: 10px;
+		border: 1px solid rgba(0,0,0,0.15);
+		color: gray;
+	    -moz-appearance:textfield;
+
+		
+	}
+	
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+	
+	
+	input[type="date"]{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0;
+		box-shadow: 0px;
+		text-decoration: none;
+		
+		border: 1px solid rgba(0,0,0,0.15);
+		color: gray;
+	    -moz-appearance:textfield;
+
+	}
+	
+	input[type=date]::-webkit-outer-spin-button,
+	input[type=date]::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}	
+
+			
+	body{
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		
+	}	
+	
+	.header{
+		width: 100%;
+		height: 75px;
+		background-color: #fff;
+		z-index: 1000;
+/* 		box-shadow: 0px 0px 8px black; */
+		border-bottom-color: #000000;
+		border-bottom: 1px solid rgba(0,0,0,0.25);
+		
+	}
+	
+	.header .logo{
+	position: relative;
+	top: 22px;
+	margin: 0 0 0 165px;
+	font-weight: bolder;
+	font-family: 'Nanum Gothic',sans-serif;
+	font-size: 62px;
+/*	width: 53px; */
+	width: 45;
+	height: 33px;
+	padding: 0;
+	
+	line-height: 62px;
+	background-color: #fff;
+	color: rgba(0,0,0,0.65);
+	text-align: right;
+	text-shadow:  0px 0px 1px white;
+	
+	background-image: url(/Images/Content/logo_d.png);
+	background-size: 45px 33px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	}
+	
+	.header div span{
+
+	 
+	 position: relative; 
+	 left: 220px; 
+	 top: 5px; 
+	 color: rgba(0,0,0,0.45)	
+	 }
+
+
+	.main{
+	width: 480px;
+/* 	height: 515px; */
+	height: 560px;
+	position: relative;
+	top:100px;	
+	margin: 0 auto;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    border-radius: 5px;
+	background-color: white;
+    border: 1px solid rgba(0,0,0,0.15);
+
+	}
+	
+
+
+	 .content{
+		
+		width: 480px;
+/* 		height: 515px; */
+		height: 560px;
+
+	}
+	
+/*
+	.content h1{
+		text-align: center;
+		font-family: sans-serif;
+		width: 100%;
+
+
+	}
+*/
+
+
+
+
+	.content .top{
+		width: 480px;
+		height: 90px;	
+		
+
+
+	}
+	
+	.content .top h1{
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		position: relative;
+		top:35px;
+	}
+	
+	.content .middle{
+		width: 480px;
+	/* 		height: 350px;	 */
+		height: 382px;
+
+	}
+	
+	.content .middle .img{
+		width: 307px;
+		height: 172px;
+		margin: 0 auto;
+		text-align: center;
+		
+
+	}
+
+	
+	
+	.img .picture{				
+		top: 1px;
+		width: 116px;
+		height: 143px;
+		margin-left: 0px;
+		position: relative;
+		z-index: 4;	
+		filter: alpha(opacity=0);
+		opacity: 0;
+		cursor: pointer;
+
+	}
+	
+
+	
+.picture + .v-picture {					/*  INPUT + DIV -> 앨범사진 영역 */
+  border: 1px solid #CCC;
+
+  text-align: left;
+  margin: 0;
+  top: -143px;
+  left: 94px;
+  position: relative;
+  width: 116px;
+  height: 143px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 116px 143px;
+
+}
+	
+.picture + .v-picture:hover {
+	background-color: rgba(0,0,0,0.15);
+	}
+
+	
+/*
+	.img .picture:hover{
+		z-index: 4;
+	}
+*/
+	
+	.img .picture-bg{
+		position: relative;
+		top: -298px;;
+		background-image: url(/Images/Content/template.png);
+		  background-position: center top;
+		  background-repeat: no-repeat;
+		  background-size: 307px 172px;
+		width: 307px;
+		height: 172px;
+		z-index: 3;
+		border-radius: 5px;
+	}
+	
+	
+	
+	
+	
+	
+	.img .picture-bg:hover{
+		z-index: 1;
+	}
+	
+	.img p{
+		position: relative;
+		z-index: 0;
+		color: gray;
+		top: -387px;
+	}
+	
+	
+	.content .middle .info {
+		width: 480px;
+ 		height: 350px; 
+		margin-top: 15px;
+
+	}
+	
+	.info ul li{
+		margin-bottom: 10px;
+		text-align: center;
+
+	}
+	.info ul li:last-child{
+		margin-bottom: 10px;
+	}
+	
+	.info ul li input{
+		
+		width: 204px;
+		height: 40px;
+		border-radius: 5px;
+	
+	}
+	
+	
+	.middle .info ol{
+
+		height: 95px;
+	}
+
+	.middle ol li{
+
+		height: 40px;
+		text-align: center;
+	}
+	
+	.middle ol li:last-child{
+		padding-top: 10px;
+		height: 55px;
+
+/* 		border:1px solid rgba(0,0,0,0.15); */
+	}
+	
+	
+	.middle ol li select{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: 1px solid rgba(0,0,0,0.15);
+		text-indent: 10px;
+		color: gray;
+		background-color: #fff;
+		border-radius: 5px;
+	}
+	
+
+  
+
+	
+	.middle ol li .cities{
+		width: 130px;
+		height: 40px;
+	}
+	.middle ol li .funerals{
+		width: 280px;
+		height: 40px;
+		margin-left: 5px;
+	}	
+	
+	.middle ol li input{
+		width: 420px;
+		height: 40px;
+		
+	}
+	
+	.info ul li .name{
+		width: 180px;
+		margin-right: 5px;
+		text-align: center;
+		font-size: 13px;
+	}
+	
+	.info ul li .coffin{
+		width: 220px;
+		margin-left: 5px;
+		text-indent: 10px;
+		font-size: 0.825em;
+	}
+	
+	.info ul li span{
+		color: gray;
+		font-size: 14px;
+
+	}
+	
+	.info ul li input[type="date"]{
+		width: 200px;
+		text-align: center;
+	}
+	
+	
+	
+	
+	.middle ol li input::-webkit-text-decoration, input::-webkit-text-cancel-button {
+		display: none;
+	}
+
+	
+	
+	.content .bottom{
+		width: 480px;
+		height: 95px;
+		text-align: center;
+	}
+	
+	.content .bottom input[type="submit"]{
+		margin-top: 20px;
+		width: 250px;
+		height: 35px;
+		line-height: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 8px 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	border: 0px solid #003366;
+	outline: none;
+	background: #615d65;
+	}
+	
+	
+
+	
+
+	
+	
+	
+	
+	/* To target IE 8, 9 and 10 Hacks */
+
+	@media screen\0 {
+		
+	
+	}
+	
+	
+
+	
+	
+	}
+	
+	/* only chrome browser css hack */
+	
+	@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	
+	}
+
+

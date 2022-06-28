@@ -1,0 +1,34 @@
+{
+  "short_name": "카담",
+  "name": "세상 모든차를 담다, 카담",
+  "icons": [
+    {
+      "src": "launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "indexm.html?launcher=true",
+  "display" : "standalone",
+  "background_color": "#3c9283",
+  "theme_color" : '#3c9283',
+
+
+  "prefer_related_applications": true,
+  	"related_applications": [
+	  {
+	    "platform": "play",
+	    "id": "com.coupang.mobile"
+	  }
+	]
+}

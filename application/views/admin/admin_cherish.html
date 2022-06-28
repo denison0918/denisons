@@ -1,0 +1,354 @@
+    <html ng-app="admin">
+
+	<style type="text/css" media="screen">
+	@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	html{
+		
+	}
+	
+	html, body, div, p, h1, h2, h3, ul, ol, li, label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+
+	} 
+		
+	ul li, ol li{
+		list-style: none;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+			
+	body{
+		margin: 0;
+		width: 100%;
+		height: 100%;
+/* 		background-color: #242424;	 */
+/* 		background: radial-gradient(circle, #202020, #212121); */
+/*		background-image: url(./images/content/black6.jpg); */
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-color:#f5f5f5;
+	}	
+	
+	.header{
+		width: 100%;
+		height: 55px;
+		position: absolute;
+		background-color: #fefefe;
+		z-index: 1000;
+/* 		box-shadow: 0px 0px 8px black; */
+		border-bottom-color: #000000;
+		border-bottom: 1px solid black;
+		
+	}
+	
+	.header .logo{
+	position: relative;
+	top: 5px;
+	margin: 0 0 0 80px;
+	font-weight: bolder;
+	font-family: 'Nanum Gothic',sans-serif;
+	font-size: 54px;
+/*	width: 53px; */
+	width: 7%;
+	height: 23px;
+	padding: 0;
+	border-radius: 12px;
+	line-height: 42px;
+	background-color: #333333;
+	color: white;
+		background-color: #fff;
+		color: black;
+	text-align: right;
+	text-shadow:  0px 0px 1px white;
+	}
+
+
+	.main{
+	width: 100%;
+	height: 100%;	
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+	}
+	
+
+
+	 .content{
+		
+		margin: auto auto;
+		
+		width: 500px;
+		height: 300px;
+
+		
+	}
+	
+	.content h1{
+		text-align: center;
+		font-family: sans-serif;
+		width: 100%;
+
+
+	}
+
+
+
+
+	.content .top{
+		width: 500px;
+		height: 200px;	
+	}
+	
+	.content .top .img{
+		width: 150px;
+		height: 200px;
+
+		float: left;
+		margin-right: 50px;
+	}
+	
+	.img button{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.content .top .info {
+		width: 300px;
+		height: 200px;
+		float: left;
+	}
+	
+	.info ul li{
+		margin-bottom: 13px;
+	}
+	.info ul li:last-child{
+		margin-bottom: 0px;
+	}
+	
+	.info ul li input{
+		width: 200px;
+		height: 40px;
+	}
+	
+	
+	
+	
+	.content .bottom{
+		margin-top: 20px;
+		width: 500px;
+		height: auto;
+
+	}
+	
+	.bottom ol li{
+		margin-bottom: 10px;
+	}
+	
+	.bottom ol li:last-child{
+		margin-bottom: 0px;
+	}
+	
+	
+	
+	.bottom ol li .cities{
+		width: 100px;
+		height: 40px;
+	}
+	.bottom ol li .funerals{
+		width: 300px;
+		height: 40px;
+	}	
+	
+	.bottom ol li input{
+		width: 400px;
+		height: 40px;
+	}
+	
+	
+	
+	
+	/* To target IE 8, 9 and 10 Hacks */
+
+	@media screen\0 {
+	
+	}
+	/* only chrome browser css hack */
+	
+	@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	
+	}
+
+
+	</style>
+	
+			<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	
+		<script>
+		
+	angular.module('admin', ['list'])
+	.controller('registerCtrl',['funeralList', '$http', function(funeralList, $http){
+
+	this.inCurr = '서울특별시';
+	this.inCurr2 = 1;
+	this.cities = ['서울특별시','부산광역시','인천광역시','대구광역시','광주광역시','울산광역시','경기도','강원도','충청북도','충청남도','경상북도','경상남도','전라북도','전라남도','세종특별자치시','제주특별자치도'];
+
+	this.cityToCode = {
+		서울특별시: 1,
+		부산광역시: 2,
+		인천광역시: 3,
+		대구광역시: 4,
+		광주광역시: 5,
+		울산광역시: 6,
+		세종특별자치시: 7,
+		경기도: 8,
+		강원도: 9,
+		충청북도: 10,
+		충청남도: 11,
+		경상북도: 12,
+		경상남도: 13,
+		제주특별자치도: 14,
+		전라북도: 15,
+		전라남도: 16
+	};
+
+	this.funerals = [];
+	this.funeralToCode = {};
+
+
+	this.select = function select(){
+		
+		var url = 'http://localhost/funeral2/index.php/json/getfunerallist/1';
+		 return $http.jsonp(url).then(function (response) {
+			 var newflist = {};
+			angular.forEach(response.funerals, function(element) {
+				alert(element.name);
+			var fname = element.name;
+			newflist[fname] = element.id;
+	  });
+	  	return newflist;
+		});
+
+	};
+
+
+
+	this.dump = function dump(obj) {
+		 var out = '';
+		 for (var i in obj) {
+		 out += i + ": " + obj[i] + "\n";
+		 }
+		alert(out);
+		}
+
+	
+//	alert(funeralList.flist);
+	
+	
+/*
+			angular.forEach(response.funerals, function(element) {
+		  this.funerals = element;
+		});
+*/
+	}]);
+	
+
+	angular.module('list', [])
+	.factory('funeralList', function($http) {
+		
+	var flist = {};	
+		
+		var abc = function(){
+			
+			var url = 'http://localhost/funeral2/index.php/json/getfunerallist/1';
+			 $http.get(url).success(function (response) {
+				var newflist = {};
+				angular.forEach(response.funerals, function(element) {
+				var fname = element.name;
+				newflist[fname] = element.id;
+		  });
+		  	flist = newflist;
+			});
+		};
+		
+		abc();
+		
+
+
+		return{
+			flist:flist
+		}
+	});
+	
+
+		
+		</script>
+	
+	
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width", initial-scale="1.0", maximun-scale="1.0", minimum-scale="1.0", user-scaleable="no">
+	
+	</head>
+	<body>
+		<div class="header">
+			
+			<div>
+				<h1 class="logo">ㄱ</h1>
+			</div>
+			
+		</div>
+		
+		<div class="main" >
+			<div class="content" ng-controller="registerCtrl as register">
+				<h1></h1>
+				<div class="top">
+					<div class="img">
+						<button>사진등록</button>
+					</div>
+					<div class="info">
+						<ul>
+							<li><input type="text" placeholder="고인명"></li>
+							<li><input type="text" placeholder="생년월일 ex) 19700101"></li>
+							<li><input type="text" placeholder="사망일 ex) 20160101"></li>
+							<li><input type="date" placeholder="발일일시 ex)2015-01-01 01:10:00"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom">
+					<ol>
+						<li>
+							<select class="cities" ng-model="register.inCurr">
+								<option ng-repeat="c in register.cities">{{c}}</option>
+							</select>
+							<select class="funerals" ng-model="register.inCurr2">
+								<option ng-repeat="f in register.funerals">{{f}}</option>
+							</select>
+							<span ng-repeat="c in register.">
+							{{c}}
+							</span>
+						</li>
+						<li><input type="text" placeholder="장례식장 내 상세위치"></li>
+						<li>
+							<select>
+								<option></option>
+							</select>
+						</li>
+						<li><input type="text" placeholder="장지 상세위치 또는 고인명"></li>
+					</ol>
+					
+				</div>
+
+			</div>
+		</div>
+		
+	</body>
+</html>

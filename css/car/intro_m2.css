@@ -1,0 +1,401 @@
+
+	
+	html{
+		min-width:320px;
+		max-width: 479px;
+	}
+	
+	html, body, div, p, h1, h2, h3, ul, ol, li, label{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-family: sans-serif;
+	} 
+	
+
+		
+	ul li, ol li{
+		list-style: none;
+	}
+	
+	a{
+		text-decoration: none;
+		cursor: pointer;
+		color: #4545f8;
+	}
+	
+	input[type="text"]{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0;
+		box-shadow: 0px;
+		text-decoration: none;
+		text-indent: 5px;
+		border: 1px solid rgba(0,0,0,0.15);
+		color: gray;
+
+		font-size: 1.025em;
+		
+	}
+	
+	input[type="number"]{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 0;
+		box-shadow: 0px;
+		text-decoration: none;
+		text-indent: 5px;
+		border: 1px solid rgba(0,0,0,0.15);
+		color: gray;
+	    -moz-appearance:textfield;
+
+		font-size: 1.025em;
+		
+	}
+	
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+		
+	input[type="submit"]{
+		width: 300px;
+		height: 37px;
+		line-height: 7px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 8px 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	border: 0px solid #003366;
+		outline: none;
+		background: #615d65;
+		cursor: pointer;
+	}
+	
+
+			
+	body{
+		margin: 0;
+
+
+
+	}	
+	
+	.header{
+	
+		width: 100%;
+		height: 55px;
+		background-color: #fff;
+		z-index: 1000;
+/* 		box-shadow: 0px 0px 8px black; */
+/* 		border-bottom: 1px solid rgba(0,0,0,0.25); */
+		
+	}
+	
+	.header .logo{
+	position: relative;
+	top: 15px;
+	margin: 0px 0px 0px 30px;
+	font-weight: bolder;
+	font-family: 'Nanum Gothic',sans-serif;
+	font-size: 42px;
+/*	width: 53px; */
+	width: 45px;
+	height: 35px;
+	padding: 0;
+
+	line-height: 38px;
+	background-color: #fff;
+	color: rgba(0,0,0,0.65);
+	text-align: right;
+	text-shadow:  0px 0px 1px white;
+	background-image: url(/Images/Content/logo_d.png);
+	background-size: 38px 28px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	
+	}
+
+	.header div span{
+	 display: none;
+	 position: relative; 
+	 left: 85px; 
+	 top: -6px; 
+	 color: rgba(0,0,0,0.45)	
+	 }
+	.main{
+
+	width: 100%;
+
+	height: auto;
+
+
+	}
+	
+	.top .subject{
+	width: 100%;
+    height: 15px;
+
+
+	}
+	
+	.subject h1{
+		margin: 0 auto;
+		width: 100%;
+		height: 80px;
+		text-align: center;
+		line-height: 85px;
+		margin: 0 auto;
+		font-size: 1.33em;
+	font-family: sans-serif;
+	color: rgba(0,0,0,0.6);
+	display: none;
+
+	}
+	
+	
+	.top .content{
+
+		width: 100%;
+		
+		min-height: 430px;
+		
+		height: auto;
+		
+		max-height: 820px;
+
+	}
+	
+
+
+	
+
+	.content .view{
+		
+		overflow: hidden;
+		margin: 0 auto;
+		width: 320px;
+		min-height: 360px;
+		height: 369px;
+
+		background-image: url(/Images/Content/Intro/mockup.png);
+		background-size: 320px 669px;
+		background-repeat: no-repeat;
+		background-position: center top;
+
+	}
+
+
+	
+	.view .top{
+		margin: 0 auto;
+		position: relative;
+		top: 98px;
+		left: 2px;
+		width: 267px;
+		height: 16px;
+		background-image: url(/Images/Content/Intro/top1.png);
+		background-size: 267px 16px;
+		background-repeat: no-repeat;
+		background-position: center top;		
+
+	}
+	
+	.view .middle{
+		position: relative;
+		margin: 0 auto;
+		top: 98px;
+		left: 1.5px;
+		width: 267px;
+		height: 246px;
+		background-image: url(/Images/Content/Intro/middle1.png);
+		background-size: 267px 267px;
+		background-repeat: no-repeat;
+		background-position: center top;
+	}
+	
+	
+	
+	.view .middle2{
+		position: relative;
+		margin: 0 auto;
+		top: -105px;
+		left: 41px;
+		width: 180px;
+		height: 142px;
+		background-image: url(/Images/Content/Intro/middle2.png);
+		background-size: 180px 142px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		z-index: 1;
+
+
+	}
+	
+
+
+	.view .bottom{
+		position: relative;
+		margin: 0 auto;
+		top: -97px;
+		left: 1.5px;
+		width: 267px;
+		
+		height: 267px;
+
+		background-image: url(/Images/Content/Intro/bottom1.png);
+		background-size: 267px 267px;
+		background-repeat: no-repeat;
+			background-position: center top;
+			
+	}
+	
+
+
+	.view .cherish{
+		position: relative;
+		display: none;
+		top: -557px;   /*  스마트폰 상태표시줄 보이기 + 19px */
+		left: 27.5px;
+		width: 268px;
+		height: 459px;   /*  스마트폰 상태표시줄 보이기 - 19px */
+		background-color:#f5f5f5;
+		z-index: 2;
+		overflow-x: scroll;
+		position: center top;
+	}
+
+	.view .cherish img{
+		width:267px;
+	}
+		
+	
+	.content .explain{
+		display: block;
+		
+		padding-top: 10px;
+
+		width: 300px;
+		margin: 0 auto;
+		height: 140px;
+
+
+	}
+	
+	.explain div{
+		width: auto;
+		height: auto;
+	}
+
+	.explain h2{
+		
+		font-family: sans-serif;
+		color: rgba(0,0,0,0.45);
+		position: relative;
+
+		font-size: 1.265em;
+		height: 33px;
+		text-align: center;
+		
+
+	}
+	
+	.explain ul{
+		position: relative;
+
+		
+	}
+	
+	.explain ul li{
+		position: relative;
+		color: rgba(0,0,0,0.45);
+		font-weight: 600;
+		font-size: 0.985em;
+		margin-bottom: 10px;
+
+	}
+	.explain ul li:first-child{
+		height: 37px;
+	}
+	
+	
+	.name{
+		display: inline-block;
+		float: left;
+		height: 37px;
+		width: 100px;
+		margin-right: 5px;
+		
+	}
+	
+	.phone{
+		height: 37px;
+		width: 195px;
+	}
+	
+	.detail{
+		font-size: 0.88em;
+		text-decoration: underline;
+	
+
+	}
+	
+	
+	
+	
+	.footer{
+		width: 100%;
+		height: 100px;
+
+		margin-bottom: 0px;
+
+		z-index: 5;
+
+
+	}
+	
+	.footer .container{
+		width:82%;
+		border-top: 1px solid rgba(0,0,0,0.25);
+		height: 74px;
+		margin: 0px auto;
+		position: relative;
+		top: 25px;
+	}
+	
+	
+	
+	/* To target IE 8, 9 and 10 Hacks */
+
+
+	@media screen\0 {
+
+
+	.view .cherish{
+	 border-style:none;
+		visibility: hidden;
+	 padding-right: 16.5px;
+	 padding-bottom: 16.5px;
+
+	}
+	
+	img{
+		visibility: visible;
+		margin-bottom: -5px;
+	}
+
+		
+	
+	}
+	/* only chrome browser css hack */
+	
+	@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	
+	}

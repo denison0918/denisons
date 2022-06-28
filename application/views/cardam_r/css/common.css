@@ -1,0 +1,400 @@
+
+/* sub/common style */
+
+.slide-layer{
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-transition: all 0.4s; /* Safari */
+    transition: all 0.4s;
+    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    z-index: 3;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide-layer .layer-bg{
+	background-color: #3c9283;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;		
+}
+
+.slide-layer .layer-bg:before{
+	content: '';
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background: #30c07d;
+	animation: AnimationOpacity 3s ease infinite;
+}
+
+				
+.layer > .layer_closer{
+	background-image: url('../img/btn_close_wht.png');
+}
+
+.slide-layer .layer_closer{
+	position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('../img/btn_close_wht.png') no-repeat center center;
+    background-size: contain;
+    transition: all 0.3s;
+    z-index: 3;
+}
+
+.slide-layer .ly-title{	
+/* 		position: absolute;  */
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 55px;
+	    line-height: 55px;
+	    padding: 0;
+	    text-align: left;
+	    z-index: 3;
+	    border-bottom: 1px solid rgba(255,255,255,.1);
+	    color: rgba(255,255,255,0);
+}
+
+
+
+.slide-layer .ly-title .tit{
+	    position: relative;
+	    display: inline-block;
+	    z-index: 3;
+	    font-size: 1rem;
+	    color: rgba(255,255,255,.6);
+	    padding-left: 20px;
+}
+
+.ly_body{
+/* 	padding-top: 55px; */
+	overflow-y: auto;
+	height: 100%;
+}
+
+.ly_body .ly_wrap{
+	margin-top: 30px;
+}
+
+.ly_wrap .subTitle{
+	color: #fff;
+    font-size: 1.95rem;
+    line-height: 1.4;
+    padding-left: 35px;
+    font-weight: 400;
+    animation-name: fadeIn;
+	animation-duration: 1.8s;
+}
+.ly_wrap .question{
+	position: relative;
+}
+
+.ly_wrap .question .opt.on{
+	margin: 0 20px 0 35px;
+	position: absolute;
+	top: 0;
+	display: block;
+}
+.ly_wrap .question .opt{
+	margin: 0 20px 0 35px;
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+.ly_wrap .question .opt.on .tit{
+	visibility: visible;
+	animation-name: fadeIn;
+	animation-duration: 1.8s;
+}
+
+.ly_wrap .question .opt .tit{
+	color: #fff;
+	font-size: 1.95rem;
+	line-height: 1.4;
+	height: 55px;
+}
+
+.ly_wrap .question .opt .cont{
+	padding-top: 20px;
+}
+
+.ly_wrap .question .opt.on .cont .btns{
+    display: inline-block;
+    width: auto;
+    padding: 0 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0 rgba(70, 124, 99, 0.4);
+    transition: background-color .15s ease;
+    visibility: visible;
+}
+
+
+.ly_wrap .question .opt .cont .btns .btn{
+	border: none;
+	box-shadow: none;
+	min-width: 30px;
+    height: 48px;
+    line-height: 50px;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    transition: all .3s ease;
+}
+.ly_wrap .question .opt .cont .btns{
+	margin-top: 37px;
+}
+.ly_wrap .question #want .cont .btns .btn.on{
+	background-color: #33ab73;
+	color: #fff;
+	padding: 0 15px;
+	box-shadow: 0px 10px 20px 0 rgba(70, 124, 99, 0.4);
+	visibility: visible;
+	position: absolute;
+	left: 0;
+	transition: background-color 0s ease;
+}
+
+
+.ly_wrap .question #ensure{
+	padding: 70px 0px 0px 0px;
+	width: 100%;
+}
+ .ly_wrap .question #ensure > ul > li > a::after{
+	content: '';
+	position: absolute;
+	top: 33px;
+	right: 20px;
+	font-size: 14px;
+	display: block;
+	padding-right: 13px;
+	color: #888888;
+	background: url('../img/link_arr.png') no-repeat 100% 50%;
+	background-size: 5px auto;
+	background-position: center right;
+	width: 5px;
+	height: 10px;
+ }
+ .ly_wrap .question #ensure > ul > li > a{
+    display: block;
+    position: relative;
+    min-height: 57px;
+    margin: 0 35px 0 35px;
+    padding: 18px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0 rgba(70, 124, 99, 0.4);
+}
+
+ .ly_wrap .question #ensure .ico{
+	display: block;
+    position: absolute;
+    top: 22px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+  }
+  
+   .ly_wrap .question #ensure .ico.kb{
+	  background: url('../img/kb.png') no-repeat 0 0;
+	  background-size: 100% auto;
+   }
+   
+   .ly_wrap .question #ensure .txt{
+	   display: inline-block;
+    padding-left: 65px;
+    font-size: 16px;
+    color: #888;
+    line-height: 1.3;
+   }
+
+/*
+.ly_wrap .question #memo .cont .btns{
+	margin-top: 60px;
+	display: none;
+}
+*/
+
+
+
+/* lowprice sub page */
+
+.ly_wrap .list{
+	padding: 0 10px;	
+}
+
+.ly_wrap .list ul li{
+	width: 100%;
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 0;
+	border: 1px solid #eee;
+	background: #fff;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+.ly_wrap .list ul li:not(:first-child){
+	margin-top: 10px;
+}
+
+.ly_wrap .list ul li .tit::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #e6e6e6
+}
+
+
+.ly_wrap .list ul li .link_{
+	display: block;
+	position: relative;
+	padding: 19px 30px 15px 20px;
+}
+.ly_wrap .list ul li .link_ .txt{
+	display: block;
+	color: #333;
+	font-size: 1.15rem;
+}
+
+.ly_wrap .list ul li .link_ .seller{
+	margin-top: 4px;
+	display: block;
+	color: #888;
+}
+
+/*
+.ly_wrap .list ul li .link_::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	width: 6px;
+	height: 11px;
+	margin-top: -6px;
+	background: url(../../cmmn/images/main/ico_link_arr.png) no-repeat 0 0;
+	background-size: 100% auto
+}
+*/
+
+.ly_wrap .list ul li .cont{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center
+}
+
+.ly_wrap .list ul li .cont .price{
+	color: #3d5bdc;
+	font-size: 1.3rem;	
+}
+.ly_wrap .list ul li .bt{
+	padding: 19px 20px 15px;
+	background: #f6f6f6
+}
+
+.ly_wrap .list ul li .bt p{
+	color: #888888;
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+/*
+.ly_wrap .list ul li .bt p + p{
+	margin-top: 5px;
+}
+*/
+
+
+
+/* sub sell */
+
+
+
+.slide-layer .layer_closer._sell{
+	position: absolute;
+    top: 19px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('../img/btn_back.png') no-repeat center center;
+    background-size: contain;
+    transition: all 0.3s;
+    z-index: 3;
+}
+
+.slide-layer .ly-title._sell{
+	line-height: 50px;
+}
+
+.slide-layer .ly-title._sell ._search{
+	padding-left: 48px;
+	padding-right: 15px;
+	align-items: center;
+	height: 55px;
+}
+.slide-layer .ly-title._sell ._txt{
+	flex: 1;
+	text-indent: 12px;
+	height: 38px;
+	padding: 6px 15px;
+	border: 1px solid #e6e6e6;
+	white-space: nowrap;
+	border-radius: 4px;
+}
+
+.slide-layer .ly-title._sell ._option{
+	margin-left: 10px;
+	height: 38px;
+	width: 90px;
+/* 	background-color: rgba(50, 201, 131, 0.36); */
+	position: relative;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: right;
+	padding: 0 10px;
+	background: rgba(50, 201, 131, 0.36) url('../img/settings.png') no-repeat 10px center;
+	background-size: 16px;
+}
+
+.blind {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+

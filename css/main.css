@@ -1,0 +1,589 @@
+	
+	html{
+			min-width: 1000px;
+			min-height: 700px;
+	}
+	
+		
+	body{
+		margin: 0;
+		width: 100%;
+		height: calc(100% - 55px); /* IE */
+		height: -o-calc(100% - 55px); /* opera */
+		height: -webkit-calc(100% - 55px); /* google, safari */
+		height: -moz-calc(100% - 55px); /* firefox */
+		background-color: #242424;	
+		background: radial-gradient(circle, #202020, #212121);
+		background-image: url(/Images/Content/a5.jpg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		
+	}	
+	
+	.top-padding{
+		width: 100%;
+		height: 55px;
+	}	
+
+	.main-compose{
+/* 		padding-top: 55px;  */
+		width: 100%;
+		box-sizing: padding-box;
+		height: 100%;	
+		min-height: 645px;
+/* 		background-color: rgba(45, 45, 45, 0.90); */
+		background-color: rgba(45, 45, 45, 0.25);
+
+	}
+	
+	.main-bg{
+		margin: 0 auto;
+		width: 900px;
+		height:100%;	
+		
+	
+		
+	}
+	
+	.main-bg .section{
+		float: left;
+		width: 370px;
+		height: 100%;
+
+	}
+	
+	.section .login{
+
+		width: 280px;
+		height: 88px;
+		margin: 110px auto 0 auto;
+		border-radius: 2px;
+
+		text-align: center;
+	}
+	
+
+	.login li:first-child{
+		margin: 0 0 10px 0;
+	}
+	
+	.login li:last-child{
+		width: 280px;
+		text-align: left;
+		margin: 5px 0 0 0;
+	}
+	
+	.login li a{
+		color: #61b3ec;
+		opacity: 0.7;
+		font-size: 11px;	
+		font-weight: bolder;
+		font-family: sans-serif;
+	}
+	
+	.login li input{
+		height: 31px;
+		border-radius: 2px;
+		font-size: 14px;
+		vertical-align: middle;
+		font-family: sans-serif;
+		box-shadow: 0px 0px 1px gray;
+	}
+	
+	.login input[type="text"]{
+
+	border: 1px solid #acacac;	
+   
+	text-align: left;
+    background-color: #fefefe;
+
+	padding-left: 5px;
+	width: 280px;
+
+	}
+
+	.login input[type="password"]{
+	
+	padding-left: 5px;
+	border: 1px solid #acacac;	
+    
+	text-align: left;
+    background-color: #fefefe;
+
+
+	width: 200px;
+
+	}
+	.login input[type="button"]{
+	margin-left: 10px;
+	width: 70px;
+	border: 0px;
+	background-color: #638eae;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14px;
+	}
+	
+	
+	.login input[type="button"]:hover{
+		background-color: #4f86b0;
+		cursor: pointer;
+	}
+
+	
+	.login input[type="checkbox"]{
+		width: 12px;
+		height: 12px;
+	}
+
+	.login li span{
+		color: #fff;
+		font-size: 11px;
+		opacity: 0.85;
+		font-family: sans-serif;
+	}
+	
+	.section .join{
+		width: 280px;
+		height: 100px;
+		margin: 30px auto 0 auto;
+		font-family: sans-serif;
+	}
+	
+	.join h1{
+		color: #fff;
+		opacity: 0.7;
+		
+		margin: 0 auto 0 8px;
+		font-size: 22px;
+		display: inline;
+	}
+
+	.join span a{
+		font-size: 20px;
+		color: #638eae;
+
+	}
+
+	
+	.main-bg .compose-bg{
+		float: left;
+		width: 530px;
+		height: 100%;
+	}
+	
+	
+
+	
+	.compose-cell{
+		position: relative;
+		top: 110px;
+
+	}
+	
+	.compose-cell h1{
+	text-align: center;
+	font-family: 'Jeju Gothic', sans-serif;
+	font-family: sans-serif;
+	font-weight: 500;
+	color: #fff;
+	text-shadow: 0px 0px 3px #000;
+	font-size: 40px;
+	opacity: 1;
+
+}
+	.compose-cell h2{
+	text-align: center;
+	margin-top:35px;
+	font-family: sans-serif;
+
+	color: #fff;
+	line-height: 25px;
+	text-shadow: 0px 0px 2px #353535;
+
+	font-size: 16px;
+	opacity: 0.7;
+	}
+	
+	
+	.cell-bg{
+		margin: 45px auto 0 auto;
+		width: 502px;
+/*
+		background-color: rgba(45, 45, 45, 0.2);
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+     	 -ms-border-radius:8px;
+			border-radius: 8px;
+*/
+	}
+
+
+	.compose-cell label{
+		padding: 15px 0 13px 0;
+		display: block;
+		text-align: center;
+		color: #fff;
+		font-family: 'Nanum Gothic', sans-serif;
+		opacity: 70%;
+	}
+
+	.content-search{
+		margin: 0 auto;
+		width: 502px;
+		height: 35px;
+		border-radius: 2px;
+		box-shadow: 0px 0px 1px black;
+		text-align: center;
+	}
+	
+	.content-search li{
+		display: inline;
+	}
+	
+
+
+	.content-search input[type="text"]{
+	height: 32px;
+	border: 1px solid #acacac;	
+    
+	text-align: center;
+    background-color: #fefefe;
+    font-family: sans-serif;
+    font-size: 14px;  
+	
+}
+
+	.content-search input[type="button"]{
+		position: relative;
+		top:-1px;
+		width: 70px;
+		height: 36px;
+		border: 0px;
+		background-color: #ffa;
+		border-left: 1px solid #acacac;
+		border-radius: 0 2px 2px 0;
+		margin-left: -4px;
+		font-family: sans-serif;
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 14px;
+	
+}
+
+	.content-search input[type="button"]:hover{
+		background-color: #ff7;
+		cursor: pointer;
+	}
+
+/*
+.content-search .sinceyear{
+	width: 100px;
+	border-radius: 2px 0 0 3px;
+
+}
+*/
+	.content-search .agoyear{
+		border-radius: 2px 0 0 3px;
+		width: 158px;                           /* 출생년도 필드를 제거하고 사이즈 조정 + 50px + 8px , border-radius 추가, margin은 원래 그대로*/
+		margin: -4px;
+		
+	}
+	
+	.content-search .agoname{
+		width: 270px;                           /* 출생년도 필드를 제거하고 사이즈 조정 + 50px */
+	
+		
+	}
+	.content-search input[type="text"]{
+		  -webkit-appearance: textfield;
+	       -moz-box-sizing: content-box;
+	    -webkit-box-sizing: content-box;
+	    		box-sizing: content-box;
+	}
+	
+	.content-search input::-webkit-text-decoration, input::-webkit-text-cancel-button {
+		display: none;
+	}
+
+	
+	.compose-cell .society{
+		margin: 45px auto 0 auto;
+		width: 502px;
+		height:150px;
+		font-family: sans-serif;
+
+	}
+	
+	.society ul{
+/*		text-align: center; */
+		width: 502px;
+
+	}
+	
+
+	
+	.society ul .commemorate1{
+
+		width: 167px; 
+		font-size: 12px;
+		font-weight: bold;
+		display: inline-block;
+		opacity: 0.54;
+		float: left;
+		text-align: center;
+		
+		margin-bottom: 15px;
+		
+	}
+
+	.society ul .commemorate2{
+
+		width: 167px; 
+		font-size: 12px;
+		font-weight: bold;
+		display: inline-block;
+		opacity: 0.54;
+		text-align: center;
+		margin-bottom: 15px;
+		
+	}	
+	
+	.society ul li a{
+		color: #ffa;
+		font-size: 15px;		
+	}
+	
+	.society ul li span{
+		color: #93772d;
+		font-size: 12.5px;
+	}
+	
+	
+	.society p{
+		text-align: right;
+		position: relative;
+		right: 15px;
+	}
+	
+	.society p a{
+		color: #fff;
+		opacity: 0.28;
+		font-weight: bold;
+		font-family: sans-serif;
+		font-size: 14px;
+	}
+
+	
+	
+
+	.main-bg .footer{
+		clear: left;
+		width: 900px;
+		height:30px;
+
+		font-size: 11px;
+		font-family: sans-serif;
+		position: relative;
+		text-align: center;
+		color: rgba(255,255,255,0.4);
+
+		line-height: 30px;
+		top:-95px;
+	
+
+	}
+	
+	
+/* IE8 , IE9, IE10 browser css hack */	
+
+@media screen\0 {
+	
+	body{
+		background-size: 100% calc(100% + 55px);   /* footer */
+	}
+	
+	.section .login{
+		position: relative;
+		left:-10px;	
+	}
+	
+	
+		
+	.section .login li input{
+		font-size: 11.5px;
+		font-weight: bolder;
+		height: 30px;
+	}
+	
+	.section .login li:last-child{
+		top:2px;
+		width: 270px;
+		position: relative;
+		left: 2px;
+		top: 0px;
+	}
+	
+	.login input[type="text"]{
+		width: 270px;
+	}
+	
+	.login input[type="password"]{
+		width: 195px;
+	}
+	
+	.login input[type="button"]{
+		width: 65px;
+	}
+	
+	.section .login li input[type="checkbox"]{
+		height: 12px;
+
+	}
+	
+	
+	.join h1{
+		font-size: 18.5px;
+		margin-left: 4.5px;
+
+	}
+	.login li span{
+		font-weight: bolder;
+	}
+	
+	.join span a{
+		font-size: 16px;
+		font-weight: bolder;
+	}
+	
+	
+	
+	.compose-cell{
+		top: 105px;
+	}
+
+	.compose-cell h1{
+
+	font-size: 33px;
+	font-weight: bold;
+
+	}
+	.main-compose h2{
+	margin-top: 35px;
+	font-weight: 800;
+	font-size: 13px;
+	font-weight: bold;
+
+	}
+	
+	.compose-cell .society{
+		margin: 45px auto 0 auto;
+		height:160px;
+	}
+	
+	.society ul li{
+		font-size: 10.8px;
+		font-weight: bolder;
+	}
+	.society ul li a{
+		font-size: 13px;
+		font-weight: bolder;
+	}
+	
+	
+	
+	.society p a{
+		font-size: 12px;
+		right: 12px;
+	}
+	
+	.content-search{
+
+		width: 457px;	
+	}
+	
+	
+	.content-search input[type="text"]{
+    font-size: 11.5px;
+    height: 32px;
+	font-weight: 600;
+	vertical-align: middle;
+	position: relative;
+
+	}
+	
+/*
+	.content-search .sinceyear{
+	width: 90px;	
+	}
+*/
+	.content-search .agoyear{
+	width: 143px;					/* 출생년도 필드를 제거하고 사이즈 조정 + 45px + * 8px */
+	
+	}
+
+	.content-search .agoname{
+	width: 245px;					/* 출생년도 필드를 제거하고 사이즈 조정 + 45px */
+	}
+
+	.content-search input[type="button"]{
+		top:0px;
+		height: 33px;
+		font-size: 11.5px;
+		width: 65px;
+		vertical-align: middle;
+		font-weight: 600;
+	}	
+	
+	
+
+}
+
+	/* only chrome browser css hack */
+	
+	@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	
+	.header .logo{
+		
+	background-image: url(/Images/Content/logo.png);
+	}
+		
+	
+	.content-search{
+		width: 500px;
+		padding: 0;
+		margin: 0;
+		margin-right: -1px;
+		margin-left: -1px;
+	}
+	
+	.content-search .sinceyear{
+		position: relative;
+		left: -1px;
+		margin-right: 0;
+
+	}
+	
+	
+	.content-search .agoyear{
+		margin: -5px;
+		padding-right: 0px;
+	}
+	
+	.content-search .agoname{
+		margin-left: -1px;
+		padding-left: 0px;
+		position: relative;
+		left: 1px;
+	}
+    .content-search input[type="button"]{
+		top:0px;
+		left: 1px;
+	}	
+    .society ul li a{
+	font-weight: 400;
+	}
+    
+	}
+
+
+

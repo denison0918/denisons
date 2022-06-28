@@ -1,0 +1,761 @@
+<html lang="ko">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta charset="utf-8">
+	<head>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;-webkit-text-size-adjust: 100%;
+				-webkit-overflow-scrolling: auto;
+				-webkit-font-smoothing: antialiased;outline:none}
+			a{text-decoration: none;color: inherit;cursor: pointer}
+			p{word-break: keep-all;}
+			li{list-style: none;}
+			input{-webkit-appearance: none;}
+			button {
+			    overflow: visible;
+			    border: none;
+			    background: transparent none;
+			    box-shadow: none;
+			    line-height: 1;
+			    cursor: pointer;
+			}
+			body{width: 100%;}
+			
+			.layerOpened{overflow: hidden;}
+			
+		
+			#wrap {width: 100%}
+			
+			#wrap .top.bg{
+				width: 100%;
+
+				background-color: #3c9283;
+				position: relative;
+			}
+			
+			#wrap .top.bg:before{			
+				content: '';
+				display: block;
+				clear: both;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+				background: #30c07d;
+				animation: AnimationOpacity 3s ease infinite;
+			}
+			
+			#wrap header{
+				width: 100%;
+				height: 55px;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				
+			}
+			
+			#wrap header .logo{
+				background: url('http://img.cardam.co.kr/Content/desktop/footer-logo.png') no-repeat center center;
+				background-size: contain;
+				width: 55px;
+				height: 55px;
+				position: absolute;
+				left: 20px;
+			}
+			
+			#wrap .tip_body{
+				position: relative;
+
+				overflow: hidden;
+				box-shadow: 0 1px 0 0 rgba(199,199,199,0.7);
+			}
+			
+			#wrap .tip_body .top{
+				padding: 11px 0;
+				text-align: center;
+				color: #fff;
+				
+			}
+			
+			#wrap .tip_body .top .h1_tit{
+				display: block;
+			    font-size: 0.95rem;
+			    line-height: 1.3;
+			    transition: all 0.5s;
+			    font-weight: 400;
+			}
+			
+			#wrap .tip_body .top .h2_tit{
+				display: block;
+			    margin-top: 5px;
+			    font-size: 1.25rem;
+			    line-height: 1.3;
+			    transition: all 0.5s;
+			    font-weight: 400;
+			}
+			
+			#wrap .tip_body .tip_card{
+				margin: 0;
+/* 			    padding: 25px 20px 35px; */
+			    background-color: #eceff1;
+			    
+			}
+			
+			
+			#wrap .tip_body .tip_card .cmnt{
+				font-size: 0.95rem;
+				line-height: 1.4;
+				color: #888;
+			}
+			
+/*
+			#wrap .tip_body .tip_card .line:after{
+				content: '';
+				display: block;
+				border: 0;
+			    width: 100%;
+			    height: 1px;
+			    margin: 20px 0 20px 0;
+			    background: #e6e6e6;
+			    line-height: 0;
+			}
+*/
+			
+			#wrap .tip_body .tip_card .tip_items{
+				background-color: #fff;
+				
+			}
+			
+			#wrap .tip_body .tip_card .tip_items .item{
+				
+			}
+			
+/*
+			#wrap .tip_body .tip_card .tip_items:first-child{
+				margin-bottom: 10px;
+			}
+*/
+			
+			#wrap .tip_body .tip_card .tip_items .item li{
+				padding: 15px;
+			}
+			
+			#wrap .tip_body .tip_card .tip_items .item > ul > li .news_img{
+				width: 110px;
+			}
+			#wrap .tip_body .tip_card .tip_items .item .news_img{
+				position: relative;
+				width: 110px;
+				display: table-cell;
+			}
+			
+			#wrap .tip_body .tip_card .tip_items .item .news_img:before{
+				content: '';
+				position: absolute;
+				display: block;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top:0;
+				border: 1px solid rgba(0,0,0,0.08);
+			}
+			
+			#wrap .tip_body .tip_card .tip_items .item .news_img > img{
+				width: 110px;
+				height: 75px;
+				vertical-align: top;
+			}
+			
+			#wrap .tip_body .tip_card .tip_items .item .news_txt{
+				display: table-cell;
+				height: 75px;
+				vertical-align: middle;
+			}
+			
+			#wrap .tip_body .tip_card .card_tit:first-child {
+				    margin-top: 0;
+			}
+			
+			#wrap .tip_body .tip_card .card_tit{
+/* 				margin: 15px 0 15px; */
+				padding: 15px 0;
+			    color: #20925d;
+			    font-size: 1.05rem;
+			}
+			
+
+			
+			#wrap .tip_body .tip_card .info_items .item{
+				margin-top: 10px;
+			}
+			
+			
+			#wrap .tip_body .tip_card .info_items .sel_bg{
+				
+				border-radius: 4px;
+				width: 100%;
+				display: block;
+			}
+			#wrap .tip_body .tip_card .info_items select{
+				width: 100%;
+				padding-left: 15px;
+				padding-right: 30px;
+				border: 1px solid #e6e6e6;
+				border-radius: 4px;
+				color: #333;
+				overflow: hidden;
+				display: block;
+				font-size: 1rem;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				height: 44px;
+				-webkit-appearance: none;
+				background: transparent url('./img/bg_select.png') no-repeat right center;
+				background-size: 24px 12px;
+				background-color: #f6f6f6;
+			}
+			
+			#wrap .tip_body .tip_card .info_items select:focus{
+				border-color: #60c898;
+				background-color: #fff;
+			}
+			#wrap .tip_body .tip_card .info_items .item .lb{			
+			    display: block;
+			    color: #888888;
+			    font-size: 0.85rem;
+			    line-height: 1.2em;
+			    padding-bottom: 8px;
+			}
+			#wrap .tip_body .tip_card .info_items .inp_txt{
+			    overflow: hidden;
+			    width: 100%;
+			    padding-left: 15px;
+			    padding-right: 30px;
+			    padding-top: 6px;
+			    padding-bottom: 6px;
+			    height: 44px;
+			    border: 1px solid #e6e6e6;
+			    border-radius: 4px;
+			    background-color: #f6f6f6;
+			    color: #333333;
+			    font-size: 1rem;
+			    display: block;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    
+			}
+			
+			#wrap .tip_body .tip_card .info_items .inp_txt:focus{
+				border-color: #60c898;
+				background-color: #fff;
+			}
+			
+			
+			
+			
+			#wrap .tip_body .tip_card .info_items .item .radio_box{
+				position: relative;
+				background: #f6f6f6;
+				border-radius: 4px;
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .radio_box:before{
+				    content: '';
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				    width: 100%;
+				    height: 100%;
+				    border-radius: 4px;
+				    border: 1px solid #e6e6e6;
+				    box-sizing: border-box;
+			}
+			#wrap .tip_body .tip_card .info_items .item .radio_box:after{
+				content: '';
+				display: table;
+				clear: both;
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .radio_box .itm{
+				    position: relative;
+				    float: left;
+				    height: 44px;
+				    border-radius: 4px;
+				    overflow: visible;
+				    font-size: 1rem;
+				    width: 50%;
+			}
+			#wrap .tip_body .tip_card .info_items .item .radio_box .itm input{
+		        position: absolute;
+			    top: 0;
+			    left: 0;
+			    opacity: 0;
+			    width: 100%;
+			    height: 100%;
+			    overflow: hidden;
+			}
+			
+			
+			#wrap .tip_body .tip_card .info_items .item .radio_box .itm input + .txt {
+				display: block;
+			    width: 100%;
+			    height: 100%;
+			    text-align: center;
+			    line-height: 44px;
+			    color: #888888;
+				}
+			
+			#wrap .tip_body .tip_card .info_items .item .radio_box .itm input:checked + .txt {
+			    border: 1px solid #e6e6e6;
+			    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+			    background: #ffffff;
+			    color: #60c898;
+			}
+			#wrap .tip_body .tip_card .info_items .item .radio_box .itm span:not(.input_chk) {
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    border-radius: 4px;
+			}
+						
+			#wrap .tip_body .tip_card .info_items .item .ph{
+				height: 44px;
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .ph:focus-within > .pl > select, 
+			#wrap .tip_body .tip_card .info_items .item .ph:focus-within > .pr > input{
+				border-color: #60c898;
+				background-color: #fff;
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .pl {
+			    width: 35%;
+			    position: absolute;
+			}
+			#wrap .tip_body .tip_card .info_items .item .pl > select{
+				border-right: 0;
+				border-radius: 4px 0px 0px 4px;
+				text-align-last:center; 
+				text-align: justify; 
+				
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .pr {
+			    width: 100%;
+			    padding-left: 35%;
+			    float: right;
+			}
+			
+			#wrap .tip_body .tip_card .info_items .item .pr > input {
+			   	padding-left: 30px;
+			}
+			
+			
+/*
+			#wrap .tip_body .tip_card .line{
+				display: block;
+				border: 0;
+			    width: 98%;
+			    height: 1px;
+			    margin: 23px 1% 23px 1%;
+			    padding-right: 20px;
+			    background: #e6e6e6;
+			    line-height: 0;
+			}
+*/
+			
+			
+/*
+			#wrap .tip_body .tip_card .agree_items .item .ag input:checked + .txt::before{
+				background-size: 16px 12px;
+			}
+*/
+			#wrap .tip_body .tip_card .agree_items{
+			    width: 100%;
+			    padding: 0 0 0 15px;
+			    border-radius: 4px;
+			    border: 1px solid #eeeeee;
+			    background: #ffffff;
+			    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+			}
+			
+			#wrap .tip_body .tip_card .agree_items .item{
+				position: relative;
+			    padding: 8px 40px 7px 0;
+			    border-top: 1px solid #e6e6e6;
+			    font-size: 0.9rem;
+			    border: 0;
+			    padding-top: 10px;
+				padding-bottom: 8px;
+			}
+			
+			#wrap .tip_body .tip_card .agree_items .item .ag{
+				position: relative;
+				display: block;
+				white-space: nowrap;
+				line-height: 1.5;
+			}
+			
+			#wrap .tip_body .tip_card .agree_items .item .ag input{
+				position: absolute;	    
+			    opacity: 0;
+			    width: 100%;
+			    height: 100%;
+			}
+			#wrap .tip_body .tip_card .agree_items .item .ag input + .txt{
+				padding-left: 25px;
+				color: #888;
+				display: block;
+			}
+			
+			#wrap .tip_body .tip_card .agree_items .item .ag input:checked + .txt{
+				color: #20925d;
+			}
+						
+			#wrap .tip_body .tip_card .agree_items .item .ag input:checked + .txt:before{
+				background: url('./img/ico_checked.png') no-repeat center center;
+				background-size: 16px 12px;
+			}
+			
+			#wrap .tip_body .tip_card .agree_items .item .ag input + .txt:before {
+			    content: '';
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: 16px;
+			    height: 19px;
+			    background: url('./img/ico_check.png') no-repeat center center;
+			    background-size: 16px 12px;
+			}
+			
+			
+			#wrap .tip_body .tip_card .agree_items .item .agree_open_detail{
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 31px;
+				height: 31px;
+				margin-top: -16px;
+				
+			}
+			#wrap .tip_body .tip_card .agree_items .item .agree_open_detail:before{
+				content: '';
+			    position: absolute;
+			    left: 10px;
+			    top: 50%;
+			    overflow: hidden;
+			    width: 11px;
+			    height: 11px;
+			    margin-top: -4.5px;
+			    background: url('./img/ico_agree_detail.png') no-repeat 0 0;
+			    background-size: auto 11px;
+			}
+			
+			#wrap .tip_body .tip_card .agree_txt{
+				font-size: 0.8rem;
+				text-indent: -8px;
+				color: #888;
+				margin-left: 12px;
+			}
+			#wrap .tip_body .tip_card .agree_txt > ul > li:first-child{
+				margin-top: 15px;
+				margin-bottom: 5px;
+			}
+			
+			
+			#wrap .tip_body .tip_card .apply_box{
+				text-align: center;
+				margin-top: 25px;
+			}
+			
+			#wrap .tip_body .tip_card .apply_box .apply{
+				padding: 15px 35px;
+			}
+			
+			
+			
+			
+			#wrap footer{
+				background-color: #eceff1;
+				text-align: center;
+				color: rgb(136, 136, 136);
+			}
+			
+			#wrap footer .layout{
+				padding: 20px 0;
+			}
+			
+			#wrap footer .ft_customer{
+				font-size: 1.05rem;
+			}
+			
+			#wrap footer .ft_info{
+				margin-top: 15px;
+				font-size: 0.8rem;
+
+				
+			}
+			
+			#wrap footer .ft_info p span{
+				display: inline-block;
+			    position: relative;
+			    margin: 2px 8px;
+			}
+			
+			#wrap footer .ft_info p span + span::before{
+				content: '|';
+			    display: block;
+			    position: absolute;
+			    margin-left: -10px;
+			    color: #dddddd;
+			}
+			
+
+
+
+
+			
+.btn {
+	border: 1px solid #eee;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+	line-height: 1;
+	display: inline-block;
+	background-color: #fff;
+	color: #20925d;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 1.2rem;
+	
+}
+		
+
+		
+@-moz-keyframes AnimationOpacity {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes AnimationOpacity {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes AnimationOpacity {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+		</style>
+		
+
+
+<!-- sub/buy style -->
+<style>
+	
+</style>
+		
+<script>
+
+</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="top bg">
+				<header>
+					<div class="layout">
+						<a class="logo" href="indexm.html"></a>
+					</div>
+				</header>
+				<div class="tip_body">
+					<div class="top">
+						<h1 class="h1_tit">중고차 관련 소식 & 팁</h1>
+<!-- 						<h2 class="h2_tit">지역·판매정보입력 및 견적신청</h2> -->
+					</div>
+					<div class="tip_card">
+<!--
+							<div class="cmnt line">
+								<p class="txt">중고차를 구매전에 고객님들이 알아두면 유용한 관련 정보를 제공하는 공간입니다.</p>
+							</div>
+-->
+							<div class="tip_items">
+<!-- 								<div class="card_tit">자동차 관련 뉴스소식</div> -->
+								<ul class="item">
+									<li>
+										<a href="javacript:void(0)">
+											<div class="news_img">
+												<img src="http://imgnews.naver.net/image/029/2018/05/31/0002466439_001_20180531180815325.jpg?type=w647">
+											</div>
+											<div class="news_txt">
+												<p>미세먼지 나쁨날엔 "노후경유차 단속"</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							
+<!--
+							<div class="tip_items">
+
+								<ul class="item">
+									<li>
+										<a href="javacript:void(0)">
+											<div class="news_img">
+												<img src="http://mimgnews1.naver.net/image/origin/092/2018/05/31/2138808.jpg?type=nf220_150">
+											</div>
+											<div class="news_txt"></div>
+										</a>
+									</li>
+								</ul>
+							</div>
+-->
+							
+							
+							
+<!--
+							<div class="card_tit">지역 및 판매자정보입력</div>
+							<div class="info_items">
+								<div class="item">
+									<span class="sel_bg">
+										<select class="sel" name="sidoCombo" id="sidoCombo">
+										<option value="">광역시/도 선택</option>
+										<option value="서울특별시">서울특별시</option>
+										<option value="경기도">경기도</option>
+										<option value="인천광역시">인천광역시</option>
+										<option value="부산광역시">부산광역시</option>
+										<option value="대전광역시">대전광역시</option>
+										<option value="대구광역시">대구광역시</option>
+										<option value="광주광역시">광주광역시</option>
+										<option value="울산광역시">울산광역시</option>
+										<option value="강원도">강원도</option>
+										<option value="충청남도">충청남도</option>
+										<option value="충청북도">충청북도</option>
+										<option value="경상남도">경상남도</option>
+										<option value="경상북도">경상북도</option>
+										<option value="전라남도">전라남도</option>
+										<option value="전라북도">전라북도</option>
+										<option value="제주특별자치도">제주특별자치도</option>
+										<option value="세종특별자치시">세종특별자치시</option>
+									</select>
+									<span>
+								</div>
+								<div class="item">
+									<p class="lb">보유차랑정보</p>
+									<p>
+										<span>
+											<input class="inp_txt" type="text" name="carName" placeholder="예시) 아반떼AD 17년식" maxlength="40"/>
+										</span>
+									</p>
+								</div>
+								
+								<div class="item">
+									<p class="lb">사고유무</p>
+									<p class="radio_box">
+										<span class="itm" for="accident_false">
+											<input type="radio" name="accident" value="0" id="accident_false" checked="" />
+											<span class="txt">무사고</span>
+										</span>
+										<span class="itm" for="accident_true">
+											<input type="radio" name="accident" value="1" id="accident_true" />
+											<span class="txt">사고</span>
+										</span>										
+									</p>
+								</div>
+								
+								<div class="item">
+									<p class="lb">본인명의 휴대폰번호</p>
+									<p class="ph">
+										<span class="pl">
+											<select name="" id="" class="sel">
+												<option value="010">SKT</option>
+												<option value="010">KT</option>
+												<option value="010">LG U+</option>
+												<option value="010">SKT알뜰폰</option>
+												<option value="010">KT알뜰폰</option>
+												<option value="010">LGT알뜰폰</option>
+											</select>
+										</span>
+										<span class="pr">
+											<input class="inp_txt" type="number" name="carName" placeholder="'-' 없이 입력" maxlength="40"/>
+										</span>
+									</p>
+								</div>
+							</div>
+							
+							
+							
+							<hr class="line"></hr>
+							
+							<div class="agree_items">
+								<p class="item">
+									<span class="ag" for="chk_agree">
+										<input type="checkbox" id="chk_agree" name="chk_agree" checked=""/>
+										<span class="txt">개인정보 수집·이용 동의(필수)</span>
+									</span>
+									<a href="javascript:void(0);" class="agree_open_detail"></a>
+								</p>
+							</div>
+							<div class="agree_txt">
+								<ul>
+									<li>- 개인정보 수집 이용 동의는 차량견적 외 목적으로는 이용하지 않습니다.</li>
+									<li>- 보다 정확한 차량시세 및 견적을 도와드리기 위해 상담원이 전화드릴 수 있습니다.</li>
+								</ul>
+							</div>
+							<div class="apply_box">
+								<button type="submit" class="btn apply">시세 및 견적신청</button>
+							</div>
+-->
+
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				<div class="layout">
+					<div class="ft_customer">
+						<p>
+							<a href="tel:1500-0000">고객센터 1500-0000</a>
+						</p>
+						<p>
+							<a href="tel:1500-0000">사업제휴센터 1500-0000</a>
+						</p>
+					</div>
+					<div class="ft_info">
+						<p>경기도 시흥시 산기대학로 비즈니스센터 12층</p>
+						<p>
+							<span>대표이사 김태홍</span>
+							<span>사업자등록번호 290-41-00154</span>
+						</p>
+						<p>ⓒ CARDAM & GIEOK INC.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+
+	</body>
+</html>
